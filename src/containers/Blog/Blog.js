@@ -24,7 +24,7 @@ class Blog extends Component {
                     posts: updatedPosts,
                 })
             })
-    }
+    }   
     postSelectedHandler = (id) => {
         this.setState({ selectedPostId: id })
     }
