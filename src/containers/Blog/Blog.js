@@ -11,7 +11,7 @@ class Blog extends Component {
         selectedPostId: null,
     }
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('https://jsonplaceholder.typicode.com/postsssss')
             .then(response => {
                 const posts = response.data.slice(0, 4);
                 const updatedPosts = posts.map(post => {
@@ -24,7 +24,10 @@ class Blog extends Component {
                     posts: updatedPosts,
                 })
             })
-    }   
+            .catch(err => {
+                console.log(err);
+            })
+    }
     postSelectedHandler = (id) => {
         this.setState({ selectedPostId: id })
     }
